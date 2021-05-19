@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<WEBB>
+
+  <SALVA_CAIXA valor="SIM" />
+  <Obsoleto valor="false" />
+
+  <!-- CONFIGURACOES DE APLICACAO -->
+  <Dominio valor="CORP" />
+  <Servidor valor="SQL5059.site4now.net"/>
+  <Usuario valor="DB_A4C4D5_WebImport_admin" />
+  <Senha valor="MUZD6GkBkP3Ye90vvoxdMg==" />
+  <Banco valor="DB_A4C4D5_WebImport" />
+
+  <CAMINHO_LOG valor="c:\TEMP" />
+
+</WEBB>

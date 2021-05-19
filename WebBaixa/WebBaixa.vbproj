@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CEA49A2-28FA-41B8-A475-F69A3423CB20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WebBaixa.My.MyApplication</StartupObject>
+    <RootNamespace>WebBaixa</RootNamespace>
+    <AssemblyName>WebBaixa</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WebBaixa.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WebBaixa.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\clsLogChrome.vb" />
+    <Compile Include="Classes\clsDadosFichas.vb" />
+    <Compile Include="Formularios\65816\65816.vb" />
+    <Compile Include="Formularios\FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSobre.Designer.vb">
+      <DependentUpon>frmSobre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSobre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DAL\pFichaImportacao.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSobre.resx">
+      <DependentUpon>frmSobre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Formularios\65816\SMW.smc" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GFT.Util\GFT.Util.vbproj">
+      <Project>{c66b31c1-df9d-4b76-9675-2f54b72378cb}</Project>
+      <Name>GFT.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Imagens\snes-controller.png" />
+    <None Include="Imagens\snes-controller3.png" />
+    <None Include="Imagens\snes-controller2.png" />
+    <None Include="Imagens\xrobo_bradesco2.png" />
+    <None Include="Imagens\xls.png" />
+    <None Include="Imagens\workf.png" />
+    <None Include="Imagens\window-duplicate-2.png" />
+    <None Include="Imagens\voltar.png" />
+    <None Include="Imagens\view-sort-descending.png" />
+    <None Include="Imagens\user-home2.ico" />
+    <None Include="Imagens\upload.png" />
+    <None Include="Imagens\top2.gif" />
+    <None Include="Imagens\top_23.gif" />
+    <None Include="Imagens\tools-wizard-3.png" />
+    <None Include="Imagens\Sonda.png" />
+    <None Include="Imagens\Somatoria.png" />
+    <None Include="Imagens\Seta_prox_32x32.png" />
+    <None Include="Imagens\seta_dir.png" />
+    <None Include="Imagens\Seta_ant_32x32.png" />
+    <None Include="Imagens\seta.png" />
+    <None Include="Imagens\robo_bradesco2.png" />
+    <None Include="Imagens\robo_bradesco.png" />
+    <None Include="Imagens\retorno.gif" />
+    <None Include="Imagens\resp.png" />
+    <None Include="Imagens\remessa.gif" />
+    <None Include="Imagens\reload.png" />
+    <None Include="Imagens\rede.gif" />
+    <None Include="Imagens\prox.png" />
+    <None Include="Imagens\proc2.png" />
+    <None Include="Imagens\proc.jpg" />
+    <None Include="Imagens\printer-6.png" />
+    <None Include="Imagens\preferences-system-network-2.ico" />
+    <None Include="Imagens\PeDeEfe2.png" />
+    <None Include="Imagens\PeDeEfe.png" />
+    <None Include="Imagens\params.png" />
+    <None Include="Imagens\page.png" />
+    <None Include="Imagens\onepixel.png" />
+    <None Include="Imagens\object-locked-2.png" />
+    <None Include="Imagens\Nucleo.png" />
+    <None Include="Imagens\novo_voltar.gif" />
+    <None Include="Imagens\novo_pesquisar.gif" />
+    <None Include="Imagens\novo_ok.gif" />
+    <None Include="Imagens\novo_incluir.gif" />
+    <None Include="Imagens\novo_excluir.gif" />
+    <None Include="Imagens\novo_editar.gif" />
+    <None Include="Imagens\news-subscribe-2.png" />
+    <None Include="Imagens\mini_ok.gif" />
+    <None Include="Imagens\mini_erro.gif" />
+    <None Include="Imagens\Menos.png" />
+    <None Include="Imagens\Mais.png" />
+    <None Include="Imagens\mail_unread_2.png" />
+    <None Include="Imagens\mail_unread.png" />
+    <None Include="Imagens\Magica_32x32.png" />
+    <None Include="Imagens\magic-tophat1.png" />
+    <None Include="Imagens\magic-tophat.png" />
+    <None Include="Imagens\LogoIso9001.jpg" />
+    <None Include="Imagens\LogoBoleto2.gif" />
+    <None Include="Imagens\LogoBoleto.gif" />
+    <None Include="Imagens\lockoverlay.png" />
+    <None Include="Imagens\lifejacket.png" />
+    <None Include="Imagens\justificar_varios.png" />
+    <None Include="Imagens\justificar_um.png" />
+    <None Include="Imagens\insert_table_small.png" />
+    <None Include="Imagens\insert-table.png" />
+    <None Include="Imagens\insert-table-row.png" />
+    <None Include="Imagens\Impressora.gif" />
+    <None Include="Imagens\Import2.png" />
+    <None Include="Imagens\Import1.png" />
+    <None Include="Imagens\Imagem1.jpg" />
+    <None Include="Imagens\ie.png" />
+    <None Include="Imagens\IconeValidar.gif" />
+    <None Include="Imagens\IconeUsers.gif" />
+    <None Include="Imagens\IconeTeclado.gif" />
+    <None Include="Imagens\IconeReceber.gif" />
+    <None Include="Imagens\IconePraca.gif" />
+    <None Include="Imagens\IconeMoedas2.jpg" />
+    <None Include="Imagens\IconeMoedas.gif" />
+    <None Include="Imagens\IconeLogout.gif" />
+    <None Include="Imagens\IconeLinha.gif" />
+    <None Include="Imagens\IconeInfo.gif" />
+    <None Include="Imagens\IconeImpressao.gif" />
+    <None Include="Imagens\IconeEscritorios.gif" />
+    <None Include="Imagens\IconeEngrenagem.gif" />
+    <None Include="Imagens\IconeDesligar.gif" />
+    <None Include="Imagens\IconeConfig.gif" />
+    <None Include="Imagens\IconeBradesco.gif" />
+    <None Include="Imagens\help_1.png" />
+    <None Include="Imagens\help-faq.ico" />
+    <None Include="Imagens\globo.png" />
+    <None Include="Imagens\GFT.png" />
+    <None Include="Imagens\gerar_diferenca.png" />
+    <None Include="Imagens\fundo3.jpg" />
+    <None Include="Imagens\fundo2.jpg" />
+    <None Include="Imagens\fundo_sobre.jpg" />
+    <None Include="Imagens\format-list-unordered.png" />
+    <None Include="Imagens\format-indent-more-31.png" />
+    <None Include="Imagens\format-indent-more-3.png" />
+    <None Include="Imagens\filter.png" />
+    <None Include="Imagens\ferramenta.png" />
+    <None Include="Imagens\eye_of_gnome.png" />
+    <None Include="Imagens\evento.png" />
+    <None Include="Imagens\Erro.gif" />
+    <None Include="Imagens\emblem-system-31.png" />
+    <None Include="Imagens\emblem-system-3.png" />
+    <None Include="Imagens\emblem-symbolic-link.png" />
+    <None Include="Imagens\emblem-money.png" />
+    <None Include="Imagens\emblem-money-2.png" />
+    <None Include="Imagens\emblem-default.png" />
+    <None Include="Imagens\Edita.png" />
+    <None Include="Imagens\edit-undo-blue.png" />
+    <None Include="Imagens\edit-undo-3.png" />
+    <None Include="Imagens\DSPS140.png" />
+    <None Include="Imagens\draw-line-2.png" />
+    <None Include="Imagens\download.png" />
+    <None Include="Imagens\distribute-vertical-top.png" />
+    <None Include="Imagens\dialog-ok-apply-6.png" />
+    <None Include="Imagens\dialog-ok-apply-4.png" />
+    <None Include="Imagens\dialog-more.png" />
+    <None Include="Imagens\dialog-fewer.png" />
+    <None Include="Imagens\dialog-cancel-41.png" />
+    <None Include="Imagens\dialog-cancel-4.png" />
+    <None Include="Imagens\desistencia.gif" />
+    <None Include="Imagens\delete_table_row.png" />
+    <None Include="Imagens\correioErro.png" />
+    <None Include="Imagens\correioDeletado.png" />
+    <None Include="Imagens\correio.png" />
+    <None Include="Imagens\confirmacao.gif" />
+    <None Include="Imagens\configure-4.png" />
+    <None Include="Imagens\computer-mainframe.png" />
+    <None Include="Imagens\computer-laptop.png" />
+    <None Include="Imagens\computer-go.png" />
+    <None Include="Imagens\completion.png" />
+    <None Include="Imagens\code-class.png" />
+    <None Include="Imagens\code-class.ico" />
+    <None Include="Imagens\CodBarras.png" />
+    <None Include="Imagens\cat_22x22.png" />
+    <None Include="Imagens\cat.png" />
+    <None Include="Imagens\CartProt.png" />
+    <None Include="Imagens\Cadeado.gif" />
+    <None Include="Imagens\btnWarning.gif" />
+    <None Include="Imagens\btnQuestion.gif" />
+    <None Include="Imagens\btnOk.gif" />
+    <None Include="Imagens\btnInfo.gif" />
+    <None Include="Imagens\btnCancel.gif" />
+    <None Include="Imagens\Brandeira.gif" />
+    <None Include="Imagens\bradesco_banco_logo2.gif" />
+    <None Include="Imagens\bradesco.png" />
+    <None Include="Imagens\Bradeira3.gif" />
+    <None Include="Imagens\Bradeira2.gif" />
+    <None Include="Imagens\botton1.gif" />
+    <None Include="Imagens\book.png" />
+    <None Include="Imagens\book-2.png" />
+    <None Include="Imagens\boleto.png" />
+    <None Include="Imagens\blockdevice-21.png" />
+    <None Include="Imagens\blockdevice-2.png" />
+    <None Include="Imagens\attach.png" />
+    <None Include="Imagens\aslfaltando.png" />
+    <None Include="Imagens\Arvore.png" />
+    <None Include="Imagens\arrow-switch.png" />
+    <None Include="Imagens\arrow-right-3.ico" />
+    <None Include="Imagens\archive-insert-2.png" />
+    <None Include="Imagens\appointment-new.png" />
+    <None Include="Imagens\application-x-compressed-tar.png" />
+    <None Include="Imagens\application-vnd.ms-excel1.png" />
+    <None Include="Imagens\application-vnd.ms-excel.png" />
+    <None Include="Imagens\application-exit-5.png" />
+    <None Include="Imagens\accessories-calculator_3.png" />
+    <None Include="Imagens\accessories-calculator.ico" />
+    <None Include="Imagens\accessories-calculator-5.ico" />
+    <None Include="Imagens\accessories-calculator-2.ico" />
+    <None Include="Imagens\3270.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
