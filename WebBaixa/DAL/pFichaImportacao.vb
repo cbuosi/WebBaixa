@@ -323,28 +323,6 @@ Public Class pFichaImportacao
             End If
 
 
-
-            'nm_pais_aquis
-            'nm_pais_origem
-
-            'If nm_pais_aquis.Trim = "" Then
-            '    bDados.AdicionaParametro(tFichaImportacao.nm_pais_aquis, "")
-            'Else
-            'End If
-            '
-            'If nm_pais_origem.Trim = "" Then
-            '    bDados.AdicionaParametro(tFichaImportacao.nm_pais_origem, "")
-            'Else
-            'End If
-
-
-
-
-
-
-
-
-
             bDados.AdicionaParametro(tFichaImportacao.cFichaImportacao, DBNull.Value)
 
             rsRet = bDados.Obter("pFichaImportacao")

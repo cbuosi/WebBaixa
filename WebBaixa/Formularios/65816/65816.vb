@@ -3242,7 +3242,7 @@ Class SNES_65816
         Runtime.InteropServices.Marshal.Copy(Video_Buffer, 0, Scan0, 256 * 224)
         Img.UnlockBits(BitmapData1)
 
-        frmSobre.PicScreen.Image = Img
+        'frmSobre.PicScreen.Image = Img
 
         'Limpa a tela
         Array.Clear(Video_Buffer, 0, Video_Buffer.Length)
@@ -3251,6 +3251,7 @@ Class SNES_65816
         Next
 
     End Sub
+
     Public Sub Screenshot()
 
         Take_Screenshot = False
@@ -3285,6 +3286,7 @@ Class SNES_65816
         Try
 
 
+            'Dim Data() As Byte = My.Resources.SMW
             Dim Data() As Byte = My.Resources.SMW
 
             Dim Banks As Integer = Data.Length / &H8000

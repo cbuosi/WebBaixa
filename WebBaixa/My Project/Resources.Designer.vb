@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -1313,6 +1313,16 @@ Namespace My.Resources
         '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property moska() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("moska", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property news_subscribe_2() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("news_subscribe_2", resourceCulture)
@@ -1625,7 +1635,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property snes_controller() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("snes-controller", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("snes_controller", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -1635,7 +1645,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property snes_controller2() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("snes-controller2", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("snes_controller2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -1645,7 +1655,7 @@ Namespace My.Resources
         '''</summary>
         Friend ReadOnly Property snes_controller3() As System.Drawing.Bitmap
             Get
-                Dim obj As Object = ResourceManager.GetObject("snes-controller3", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("snes_controller3", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

@@ -28,6 +28,7 @@ Partial Class FrmPrincipal
         Me.pb1 = New System.Windows.Forms.ProgressBar()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.cmdHelp = New GFT.Util.SuperButton()
         Me.txt_nm_pais_aquis = New GFT.Util.SuperTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_exportador_nome = New GFT.Util.SuperTextBox()
@@ -48,7 +49,6 @@ Partial Class FrmPrincipal
         Me.cmdPesq = New GFT.Util.SuperButton()
         Me.lvResult = New GFT.Util.SuperLV()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.cmdHelp = New GFT.Util.SuperButton()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
@@ -120,6 +120,26 @@ Partial Class FrmPrincipal
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Pesquisa"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'cmdHelp
+        '
+        Me.cmdHelp.BackColor = System.Drawing.Color.Transparent
+        Me.cmdHelp.BackgroundImage = CType(resources.GetObject("cmdHelp.BackgroundImage"), System.Drawing.Image)
+        Me.cmdHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdHelp.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.cmdHelp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.cmdHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmdHelp.Font = New System.Drawing.Font("Verdana", 9.0!)
+        Me.cmdHelp.ForeColor = System.Drawing.Color.Black
+        Me.cmdHelp.Image = Global.WebBaixa.My.Resources.Resources.help_1
+        Me.cmdHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.cmdHelp.Location = New System.Drawing.Point(816, 577)
+        Me.cmdHelp.Name = "cmdHelp"
+        Me.cmdHelp.Size = New System.Drawing.Size(98, 46)
+        Me.cmdHelp.TabIndex = 19
+        Me.cmdHelp.Text = "Sobre"
+        Me.cmdHelp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cmdHelp.UseVisualStyleBackColor = False
         '
         'txt_nm_pais_aquis
         '
@@ -391,32 +411,13 @@ Partial Class FrmPrincipal
         Me.TabPage2.Text = "Importação"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'cmdHelp
-        '
-        Me.cmdHelp.BackColor = System.Drawing.Color.Transparent
-        Me.cmdHelp.BackgroundImage = CType(resources.GetObject("cmdHelp.BackgroundImage"), System.Drawing.Image)
-        Me.cmdHelp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.cmdHelp.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cmdHelp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(150, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.cmdHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.cmdHelp.Font = New System.Drawing.Font("Verdana", 9.0!)
-        Me.cmdHelp.ForeColor = System.Drawing.Color.Black
-        Me.cmdHelp.Image = Global.WebBaixa.My.Resources.Resources.help_1
-        Me.cmdHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.cmdHelp.Location = New System.Drawing.Point(816, 577)
-        Me.cmdHelp.Name = "cmdHelp"
-        Me.cmdHelp.Size = New System.Drawing.Size(98, 46)
-        Me.cmdHelp.TabIndex = 19
-        Me.cmdHelp.Text = "Sobre"
-        Me.cmdHelp.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.cmdHelp.UseVisualStyleBackColor = False
-        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1312, 669)
         Me.Controls.Add(Me.TabControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Principal"

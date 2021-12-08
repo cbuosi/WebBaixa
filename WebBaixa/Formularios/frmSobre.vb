@@ -64,8 +64,8 @@ Public Class frmSobre
         MyBase.New()
         Try
             Me.DoubleBuffered = True
-            Me.SetStyle(ControlStyles.AllPaintingInWmPaint, True)
-            Me.SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
+            'Me.SetStyle(ControlStyles.AllPaintingInWmPaint, True)
+            'Me.SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
             InitializeComponent()
         Catch ex As Exception
         End Try
@@ -90,16 +90,16 @@ Public Class frmSobre
             timerCubo.Enabled = True
 
 
-            oSnes = New SNES_65816
-            PicScreen.Visible = True
-            oSnes.Hi_Res_Timer_Initialize()
-            oSnes.Load_Rom("")
-            oSnes.Reset_65816()
-            oSnes.Reset_PPU()
-            oSnes.Reset_IO()
-            oSnes.SNES_On = True
-            PicScreen.Focus()
-            oSnes.Main_Loop()
+            'oSnes = New SNES_65816
+            'PicScreen.Visible = True
+            'oSnes.Hi_Res_Timer_Initialize()
+            'oSnes.Load_Rom("")
+            'oSnes.Reset_65816()
+            'oSnes.Reset_PPU()
+            'oSnes.Reset_IO()
+            'oSnes.SNES_On = True
+            'PicScreen.Focus()
+            'oSnes.Main_Loop()
 
 
 

@@ -221,65 +221,63 @@ Public Class FrmPrincipal
             strJSONLog = File.ReadAllText(strFileName)
 
             oLogChrome = JsonConvert.DeserializeObject(Of clsLogChrome)(strJSONLog)
-
+            '
             DP1("#########################################################################################")
-
+            '
             For Each oEntry As Entry In oLogChrome.log.entries
-
-
+                '
                 If oEntry.response.content.mimeType = "application/json" Then
-
+                    '
                     strJSONConteudo = oEntry.response.content.text
 
-                    If Not strJSONConteudo Is Nothing AndAlso strJSONConteudo.Contains("""data"":{""data""") Then
 
+                    '
+
+                    If Not strJSONConteudo Is Nothing AndAlso strJSONConteudo.Contains("""data"":{""data""") Then
+                        '
+                        System.Diagnostics.Debug.Print(oEntry.response.content.text)
 
                         strJSONConteudo = strJSONConteudo.Replace("""data"":{""data""", """data"":{""Ficha""")
-
                         DP1("-----------------------------------------------------------------------------------------")
-                        'DP1(oEntry.response.content.text)
-
+                        '
                         Ficha = JsonConvert.DeserializeObject(Of clsDadosFichas)(strJSONConteudo)
-
-
+                        '
                         For Each _ficha As Ficha In Ficha.data.ficha
                             lstFicha.Add(_ficha)
                         Next _ficha
-
-
+                        '
                         DP1("TOT JSON: " & Ficha.data.ficha.Count.ToString)
 
                         tot += Ficha.data.ficha.Count
 
                     End If
-
+                    '
                 End If
-
+                '
             Next oEntry
-
+            '
             DP1("-----------------------------------------------------------------------------------------")
             DP1("TOT GERAL: " & tot.ToString)
-
+            '
             pb1.Minimum = 0
             pb1.Maximum = lstFicha.Count
             pb1.Value = 0
-
+            '
             DP1("#########################################################################################")
             DP1("## INICIO INSERÇÃO BANCO DE DADOS...")
 
             For Each _ficha As Ficha In lstFicha
-
+                '
                 Incluir(_ficha)
-
+                '
                 pb1.Value += 1
-
+                '
                 If pb1.Value Mod 10 = 0 Then
                     DP1("## ATUALIZANDO: " & pb1.Value.ToString & " / " & lstFicha.Count.ToString)
                     Application.DoEvents()
                     pb1.Refresh()
                 End If
-
-
+                '
             Next _ficha
 
             DP1("## FIM INSERÇÃO BANCO DE DADOS...")
@@ -295,7 +293,12 @@ Public Class FrmPrincipal
     Private Sub Incluir(ByVal oFicha As Ficha)
 
         Try
+
             '
+            'xCDec(oFicha.val_fob_us_subitem),
+            '             val_vmle_us_subitem
+            '
+
             pFichaImportacao.Incluir(oFicha.nm_pais_origem,
                                      xCDec(oFicha.qtd_comerc),
                                      oFicha.importador_endereco,
@@ -304,7 +307,7 @@ Public Class FrmPrincipal
                                      oFicha.nome_unid_desembaraco,
                                      xCDec(oFicha.anomes),
                                      xCDec(oFicha.id_import),
-                                     xCDec(oFicha.val_fob_us_subitem),
+                                     xCDec(oFicha.val_vmle_us_subitem),
                                      oFicha.exportador_nome,
                                      oFicha.desc_prodt,
                                      oFicha.tp_unid_comerc,
@@ -332,11 +335,14 @@ Public Class FrmPrincipal
 
     Private Function xCDec(ByVal _valor As String) As Decimal
 
+        Dim decimalSeparator As String
+
         Try
 
+            decimalSeparator = Globalization.CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator
 
-            If IsNumeric(_valor.Replace(".", ",")) Then
-                Return CDec(_valor.Replace(".", ","))
+            If IsNumeric(_valor.Replace(".", decimalSeparator).Replace(",", decimalSeparator)) Then
+                Return CDec(_valor.Replace(".", decimalSeparator).Replace(",", decimalSeparator))
             Else
                 Return Nothing
             End If

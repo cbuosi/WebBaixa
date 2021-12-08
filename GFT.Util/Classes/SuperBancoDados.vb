@@ -58,13 +58,13 @@ Public Class BancoDados
                    ByVal _strDatabase As String,
                    ByVal _strUserID As String,
                    ByVal _strPassword As String)
-
+        '
         strServer = _strServer
         strDatabase = _strDatabase
         strUserID = _strUserID
         strPassword = _strPassword
         LimpaParametros()
-
+        '
     End Sub
 
     Sub New()
@@ -189,6 +189,7 @@ Public Class BancoDados
         Try
 
             Return "Server=" & strServer & '"," & SQL_SERVER_DEFAULT_PORT &
+                   ";Asynchronous Processing=true" &
                    ";Database=" & strDatabase &
                    ";User Id=" & strUserID &
                    ";Password=" & strPassword &
@@ -445,10 +446,6 @@ Public Class BancoDados
 
             oRelogio.Stop()
 
-            'If sgdklgskl Then
-            '    '
-            'End If
-
             oDataSet.InfoPesquisa = oDataSet.TotalRegistros().ToString("0,0#") & " registro(s). " & (oRelogio.ElapsedMilliseconds / 1000).ToString & " segundo(s)."
 
             If ParametrosProc(0) Is Nothing Then
@@ -519,9 +516,7 @@ Public Class BancoDados
 
         Dim con As SqlConnection = Nothing
         Dim cmd As SqlCommand = Nothing
-        '----------------------------------------
         Dim oRelogio As Stopwatch = Nothing
-        'Dim iTot As Integer = 0
 
         Try
 
@@ -546,7 +541,10 @@ Public Class BancoDados
             con.Open()
 
             cmd.CommandTimeout = CMD_TIME_OUT
+
             cmd.ExecuteNonQuery()
+            'cmd.BeginExecuteNonQuery()
+
 
             oRelogio.Stop()
 
