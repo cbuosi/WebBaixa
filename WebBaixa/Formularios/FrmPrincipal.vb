@@ -406,7 +406,9 @@ Public Class FrmPrincipal
 
     Private Sub cmdHelp_Click(sender As Object, e As EventArgs) Handles cmdHelp.Click
 
-        frmSobre.ShowDialog()
+        Dim frm1 = New frmSobre()
+        frm1.ShowDialog()
+        frm1.Dispose()
 
     End Sub
 End Class

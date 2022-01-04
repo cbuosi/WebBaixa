@@ -1311,6 +1311,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Consulta um recurso localizado do tipo System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property mosca_v() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("mosca_v", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         '''</summary>
         Friend ReadOnly Property moska() As System.Drawing.Bitmap
