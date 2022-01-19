@@ -279,7 +279,7 @@ Public Class pFichaImportacao
             bDados.LimpaParametros()
             bDados.AdicionaParametro(OPERACAO, "GRID")
 
-            If incoterm.Trim = "" OrElse IsNumeric(cdncm_compl) = False Then
+            If cdncm_compl.Trim = "" OrElse IsNumeric(cdncm_compl) = False Then
                 bDados.AdicionaParametro(tFichaImportacao.cdncm_compl, DBNull.Value) 'decimal
             Else
                 bDados.AdicionaParametro(tFichaImportacao.cdncm_compl, CDec(cdncm_compl)) 'decimal

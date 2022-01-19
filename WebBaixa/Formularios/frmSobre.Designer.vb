@@ -67,7 +67,7 @@ Partial Class frmSobre
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(126, 24)
         Me.Label1.TabIndex = 20
-        Me.Label1.Text = "WebBaixa 1.2"
+        Me.Label1.Text = "WebBaixa 1.3"
         '
         'WMP
         '
@@ -102,8 +102,10 @@ Partial Class frmSobre
         Me.PerformLayout()
 
     End Sub
+
     Friend WithEvents btnVoltar As SuperButton
     Friend WithEvents timerCubo As System.Windows.Forms.Timer
     Friend WithEvents Label1 As Label
     Friend WithEvents WMP As AxWMPLib.AxWindowsMediaPlayer
+
 End Class
