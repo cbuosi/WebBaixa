@@ -108,39 +108,85 @@ Namespace DadosFichas
         Public Property language As String
     End Class
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Public Class Info
-        Public Property apiAccess As Boolean
-        Public Property inTrial As Boolean
-        Public Property useBiConditionFilter As Boolean
-        Public Property tagsForFilter As Boolean
-        Public Property contractedDepartment As String 'xx
-        Public Property taxesFunctionality As Boolean
-        Public Property excelExport As Boolean
-        Public Property excelLines As Integer
-        Public Property excelDownloads As Integer
-        Public Property monthlySearches As Integer
-        Public Property searchDaysLimit As Integer
-        Public Property searchDaysRange As Integer
-        Public Property searchLinesLimit As Integer
-        Public Property userLimit As Integer
-        Public Property filterPossibleGuysLimit As Integer
-        Public Property trialRemainingDays As Integer
-        Public Property trialStart As String 'xx
-        Public Property trialExpiration As String 'xx
-        Public Property contractStart As DateTime
-        Public Property contractExpiration As DateTime
-        Public Property deadlineMonthNewData As Integer
-        Public Property expoProductFunctionality As Boolean
-        Public Property expoDashboardChartYearToDate As Boolean
-        Public Property expoRealExporterFunctionality As Boolean
-        Public Property expoAverageShipmentFunctionality As Boolean
-        Public Property updatePeriodForData As String
-        Public Property uploadSizeLimitMb As String 'xx
-        Public Property trackingMonthlyBl As String 'xx
-        Public Property trackingForceCertificate As String 'xx
-        Public Property trackingApiAccess As String 'xx
-        Public Property trackingOnlyInternationalLogistics As String 'xx
-        Public Property fobUnitValue As Boolean
+        Public Property apiAccess As Boolean                               'Public bool apiAccess { Get; Set; }
+        Public Property inTrial As Boolean                                 'Public bool inTrial { Get; Set; }
+        Public Property useBiConditionFilter As Boolean                    'Public bool useBiConditionFilter { Get; Set; }
+        Public Property tagsForFilter As Boolean                           'Public bool tagsForFilter { Get; Set; }
+        Public Property contractedDepartment As String 'xx                 'Public Object contractedDepartment { Get; Set; }              
+        Public Property taxesFunctionality As Boolean                      'Public bool taxesFunctionality { Get; Set; }
+        Public Property excelExport As Boolean                             'Public bool excelExport { Get; Set; }
+        Public Property excelLines As Integer                              'Public int excelLines { Get; Set; }
+        Public Property excelDownloads As Integer                          'Public int excelDownloads { Get; Set; }
+        Public Property monthlySearches As Integer                         'Public int monthlySearches { Get; Set; }
+        Public Property searchDaysLimit As Integer                         'Public int searchDaysLimit { Get; Set; }
+        Public Property searchDaysRange As Integer                         'Public int searchDaysRange { Get; Set; }
+        Public Property searchLinesLimit As Integer                        'Public int searchLinesLimit { Get; Set; }
+        Public Property userLimit As Integer                               'Public int userLimit { Get; Set; }
+        Public Property filterPossibleGuysLimit As Integer                 'Public int filterPossibleGuysLimit { Get; Set; }
+        Public Property trialRemainingDays As Integer                      'Public int trialRemainingDays { Get; Set; }
+        Public Property trialStart As String 'xx                           'Public DateTime trialStart { Get; Set; }              
+        Public Property trialExpiration As String 'xx                      'Public DateTime trialExpiration { Get; Set; }              
+        Public Property contractStart As DateTime?                          'Public Object contractStart { Get; Set; }
+        Public Property contractExpiration As DateTime?                     'Public Object contractExpiration { Get; Set; }
+        Public Property deadlineMonthNewData As Integer                    'Public int deadlineMonthNewData { Get; Set; }
+        Public Property expoProductFunctionality As Boolean                'Public bool expoProductFunctionality { Get; Set; }
+        Public Property expoDashboardChartYearToDate As Boolean            'Public bool expoDashboardChartYearToDate { Get; Set; }
+        Public Property expoRealExporterFunctionality As Boolean           'Public bool expoRealExporterFunctionality { Get; Set; }
+        Public Property expoAverageShipmentFunctionality As Boolean        'Public bool expoAverageShipmentFunctionality { Get; Set; }
+        Public Property updatePeriodForData As String                      'Public String updatePeriodForData { Get; Set; }
+        Public Property uploadSizeLimitMb As String 'xx                    'Public Object uploadSizeLimitMb { Get; Set; }              
+        Public Property trackingMonthlyBl As String 'xx                    'Public Object trackingMonthlyBl { Get; Set; }              
+        Public Property trackingForceCertificate As String 'xx             'Public Object trackingForceCertificate { Get; Set; }              
+        Public Property trackingApiAccess As String 'xx                    'Public Object trackingApiAccess { Get; Set; }              
+        Public Property trackingOnlyInternationalLogistics As String 'xx   'Public Object trackingOnlyInternationalLogistics { Get; Set; }              
+        Public Property fobUnitValue As Boolean                            'Public bool fobUnitValue { Get; Set; }
+        Public Property hasSiscoriBase As Boolean                          'Public bool hasSiscoriBase { Get; Set; }
+        Public Property hasComexStatBase As Boolean                        'Public bool hasComexStatBase { Get; Set; }
+        Public Property searchDaysLimitComexstat As Integer                'Public int searchDaysLimitComexstat { Get; Set; }
+        Public Property shipments As Boolean                               'Public bool shipments { Get; Set; }
+        Public Property hasExTarifario As Boolean                          'Public bool hasExTarifario { Get; Set; }
+
     End Class
 
     Public Class Column
