@@ -108,46 +108,6 @@ Namespace DadosFichas
         Public Property language As String
     End Class
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     Public Class Info
         Public Property apiAccess As Boolean                               'Public bool apiAccess { Get; Set; }
         Public Property inTrial As Boolean                                 'Public bool inTrial { Get; Set; }
