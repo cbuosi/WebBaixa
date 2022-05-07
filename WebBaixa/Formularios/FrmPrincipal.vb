@@ -230,9 +230,6 @@ Public Class FrmPrincipal
                     '
                     strJSONConteudo = oEntry.response.content.text
 
-
-                    '
-
                     If Not strJSONConteudo Is Nothing AndAlso strJSONConteudo.Contains("""data"":{""data""") Then
                         '
                         System.Diagnostics.Debug.Print(oEntry.response.content.text)
